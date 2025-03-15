@@ -1,3 +1,4 @@
 askii
 *.o
 *.swp
+/build

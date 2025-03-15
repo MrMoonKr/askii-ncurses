@@ -1,7 +1,8 @@
 #ifndef _GRAPHICS_H
 #define _GRAPHICS_H
 
-#include <ncurses.h>
+//#include <ncurses.h>
+#include <ncurses/ncurses.h>
 #include "types.h"
 
 void init_graphics(void);

@@ -1,10 +1,10 @@
 #define _DEFAULT_SOURCE
 #include <fcntl.h>
-#include <ncurses.h>
+#include <ncurses/ncurses.h>
 #include <math.h>
 #include <stdlib.h>
 #include <sys/time.h>
-#include <sys/mman.h>
+//#include <sys/mman.h>
 #include <unistd.h>
 #include "config.h"
 #include "util.h"
@@ -79,9 +79,9 @@ int map_score(int **m)
 		return -1;
 
 	// get pointer to mapped file
-	*m = mmap(0, sizeof(**m), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-	if(*m == MAP_FAILED)
-		return -1;
+	// *m = mmap(0, sizeof(**m), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+	// if(*m == MAP_FAILED)
+	// 	return -1;
 
 	return fd;
 }
@@ -89,7 +89,7 @@ int map_score(int **m)
 void close_score(int f, int *m)
 {
 	if(f < 0) return;
-	munmap(m, sizeof(*m));
+	//munmap(m, sizeof(*m));
 	close(f);
 }
 

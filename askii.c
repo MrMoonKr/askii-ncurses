@@ -1,5 +1,5 @@
 #define _DEFAULT_SOURCE
-#include <ncurses.h>
+#include <ncurses/ncurses.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
